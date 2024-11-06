@@ -3,7 +3,7 @@ package org.example.gestionadordecarros.Clases;
 import java.time.LocalDate;
 import java.util.Locale;
 
-public class Vehiculo {
+public class  Vehiculo  {
     private String numeroMatricula;
     private String marca;
     private String modelo;
@@ -14,6 +14,10 @@ public class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.fechaFabricacion = fechaFabricacion;
+    }
+
+    public static Vehiculo getSampleVehiculo() {
+        return new Vehiculo("1234", "Toyota", "Corolla", LocalDate.now());
     }
 
     public String getNumeroMatricula() {

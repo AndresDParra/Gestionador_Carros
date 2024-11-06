@@ -40,4 +40,7 @@ public class Reserva {
     public void setPrecioTotal(float precioTotal) {
         this.precioTotal = precioTotal;
     }
+    public static Reserva getSampleReserva() {
+        return new Reserva(Cliente.getSampleCliente(), Vehiculo.getSampleVehiculo(), 100000, LocalDate.now(), LocalDate.now().plusDays(2));
+    }
 }

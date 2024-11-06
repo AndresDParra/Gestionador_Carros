@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="504.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Cliente.Buscar_Cliente">
+   <children>
+       <SplitPane dividerPositions="0.4859484777517564" layoutX="23.0" layoutY="60.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="435.0">
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="212.0" prefWidth="433.0">
+                <children>
+                    <TextField fx:id="espacio_Nombre_Cliente" layoutX="194.0" layoutY="36.0" />
+                    <TextField fx:id="espacio_Cedula_Cliente" layoutX="194.0" layoutY="81.0" />
+                    <Button fx:id="button_Buscar_Cliente" layoutX="299.0" layoutY="148.0" mnemonicParsing="false" onAction="#buscar_Cliente" text="Buscar" />
+                    <Text layoutX="68.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Text>
+                    <Text layoutX="68.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cedula">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Text>
+                    <Button fx:id="button_Limpiar_Cliente" layoutX="65.0" layoutY="148.0" mnemonicParsing="false" onAction="#limpiar_Cliente" text="Limpiar" />
+                </children>
+           </AnchorPane>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <children>
+                    <TableView fx:id="table_Cliente" layoutX="28.0" layoutY="14.0" prefHeight="200.0" prefWidth="378.0">
+                        <columns>
+                            <TableColumn fx:id="columna_Nombre_Cliente" prefWidth="75.0" text="C1" />
+                            <TableColumn fx:id="columna_Cedula_Cliente" prefWidth="75.0" text="C2" />
+                        </columns>
+                    </TableView>
+                </children>
+           </AnchorPane>
+       </SplitPane>
+      <Text layoutX="186.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar Cliente">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

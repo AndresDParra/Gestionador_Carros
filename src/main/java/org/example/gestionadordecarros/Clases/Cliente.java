@@ -12,6 +12,10 @@ public class Cliente extends Persona{
         this.direccion = direccion;
     }
 
+    public static Cliente getSampleCliente() {
+        return new Cliente("Juan", "Perez", "1234", "12345678", "Calle 123");
+    }
+
     public String getCedula() {
         return cedula;
     }
@@ -34,5 +38,14 @@ public class Cliente extends Persona{
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "cedula='" + cedula + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
     }
 }

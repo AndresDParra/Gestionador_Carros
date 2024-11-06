@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="6.0" layoutY="8.0" prefHeight="25.0" prefWidth="600.0" text="                                                        Crear vehículo">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <SplitPane dividerPositions="0.5276595744680851" layoutX="71.0" layoutY="40.0" orientation="VERTICAL" prefHeight="472.0" prefWidth="501.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="439.0">
+                    <children>
+                        <Label layoutX="31.0" layoutY="14.0" text="Información vehículo">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="81.0" layoutY="56.0" text="Número matrícula: " />
+                        <Label layoutX="84.0" layoutY="84.0" text="Marca: " />
+                        <Label layoutX="81.0" layoutY="115.0" text="Año de publicación: " />
+                        <Label layoutX="81.0" layoutY="145.0" text="Modelo:" />
+                        <Label layoutX="79.0" layoutY="179.0" text="Tipo:" />
+                        <TextField layoutX="253.0" layoutY="52.0" />
+                        <TextField layoutX="253.0" layoutY="80.0" />
+                        <TextField layoutX="253.0" layoutY="111.0" />
+                        <TextField layoutX="253.0" layoutY="141.0" />
+                        <TextField layoutX="253.0" layoutY="175.0" />
+                        <Button layoutX="276.0" layoutY="215.0" mnemonicParsing="false" text="crear vehículo" />
+                        <Button layoutX="97.0" layoutY="215.0" mnemonicParsing="false" text="Limpiar" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="193.0" prefWidth="424.0">
+                    <children>
+                        <TableView layoutX="41.0" layoutY="10.0" prefHeight="165.0" prefWidth="409.0">
+                            <columns>
+                                <TableColumn prefWidth="102.0" text="Nro. matricula" />
+                                <TableColumn prefWidth="48.0" text="Marca" />
+                                <TableColumn prefWidth="103.0" text="Año publicación" />
+                                <TableColumn prefWidth="75.0" text="Modelo" />
+                                <TableColumn prefWidth="75.0" text="Tipo" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="389.0" layoutY="184.0" mnemonicParsing="false" text="eliminar" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
+
