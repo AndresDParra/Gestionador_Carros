@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Vehiculo.Crear_Vehiculo">
     <children>
         <Label layoutX="6.0" layoutY="8.0" prefHeight="25.0" prefWidth="600.0" text="                                                        Crear vehículo">
             <font>
@@ -54,3 +54,4 @@
         </SplitPane>
     </children>
 </AnchorPane>
+

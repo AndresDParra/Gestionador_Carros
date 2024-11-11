@@ -129,44 +129,47 @@ public class Crear_Cliente {
 
     public Crear_Cliente() {
     }
+
     public void initialize() {
         column_Nombre.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
         column_Cedula.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCedula()));
-        ObservableList<Cliente> clientes = FXCollections.observableArrayList(
-                new Cliente("Juan", "Parra", "1234567890", "54321", "Calle 20"),
-                new Cliente("Maria", "Luisa", "0987654321", "32444", "Calle 30"));
-        Table_Cliente.setItems(clientes);
-    }
+            ObservableList<Cliente> clientes = FXCollections.observableArrayList(
+                    new Cliente("Juan", "Parra", "1234567890", "54321", "Calle 20"),
+                    new Cliente("Maria", "Luisa", "0987654321", "32444", "Calle 30"));
+            Table_Cliente.setItems(clientes);
+        }
+
 
     @FXML
     public void guardar_Cliente(ActionEvent actionEvent) {
-        initialize();
         String nombre = espacio_Nombre_Cliente.getText();
         String apellido = espacio_Apellido.getText();
         String cedula = espacio_Cedula_Cliente.getText();
         String telefono = espacio_Telefono_Cliente.getText();
         String direccion = espacio_Direccion_Cliente.getText();
 
+
         if (nombre == null || apellido == null || cedula == null || telefono == null || direccion == null || nombre.isEmpty() || apellido.isEmpty() || cedula.isEmpty() || telefono.isEmpty() || direccion.isEmpty()) {
             showAlert(javafx.scene.control.Alert.AlertType.ERROR, "Error", "All fields must not be empty");
         } else {
-            Cliente cliente = new Cliente(nombre, apellido, cedula, telefono, direccion);
-            GestionadorCarros.getClientes().add(cliente);
-            showAlert(javafx.scene.control.Alert.AlertType.INFORMATION, "Success", "Cliente guardado");
-            Table_Cliente.setItems(FXCollections.observableArrayList(GestionadorCarros.getClientes()));
+            if (GestionadorCarros.getClientes().stream().anyMatch(cliente -> cliente.getCedula().equals(cedula))) {
+                showAlert(javafx.scene.control.Alert.AlertType.ERROR, "Error", "Cliente ya existe");
+            } else {
+                Cliente cliente = new Cliente(nombre, apellido, cedula, telefono, direccion);
+                GestionadorCarros.getClientes().add(cliente);
+                showAlert(javafx.scene.control.Alert.AlertType.INFORMATION, "Success", "Cliente guardado");
+                Table_Cliente.setItems(FXCollections.observableArrayList(GestionadorCarros.getClientes()));
+
+            }
+        }
+
+    }
+        public void limpiar_Cliente (ActionEvent actionEvent){
+            espacio_Nombre_Cliente.clear();
+            espacio_Apellido.clear();
+            espacio_Cedula_Cliente.clear();
+            espacio_Telefono_Cliente.clear();
+            espacio_Direccion_Cliente.clear();
 
         }
-    }
-
-
-
-
-    public void limpiar_Cliente(ActionEvent actionEvent) {
-        espacio_Nombre_Cliente.clear();
-        espacio_Apellido.clear();
-        espacio_Cedula_Cliente.clear();
-        espacio_Telefono_Cliente.clear();
-        espacio_Direccion_Cliente.clear();
-
-    }
 }

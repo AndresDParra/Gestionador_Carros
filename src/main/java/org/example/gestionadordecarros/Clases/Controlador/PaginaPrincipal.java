@@ -36,7 +36,7 @@ public class PaginaPrincipal {
     public void opciones_Vehiculo(ActionEvent actionEvent) throws IOException {
         Stage stageVehiculos = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaOpcionesVehiculo = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Pagina_Gestion_Vehiculo.fxmll")));
+        Parent paginaOpcionesVehiculo = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Pagina_Gestion_Vehiculo.fxml")));
         Scene scene = new Scene(paginaOpcionesVehiculo, 600, 400);
         stageVehiculos.setScene(scene);
         stageVehiculos.show();
