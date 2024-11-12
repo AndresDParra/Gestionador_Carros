@@ -12,18 +12,18 @@ import java.util.Objects;
 public class Opciones_Vehiculo {
 
     public void pasar_A_Crear_Vehiculo(ActionEvent actionEvent) throws IOException {
-        Stage stageEmpleados = new Stage();
+        Stage stageVehiculo = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaCrearEmpleados = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Buscar_Vehiculo.fxml")));
+        Parent paginaCrearEmpleados = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Opciones_Moto_O_Vehiculo.fxml")));
         Scene scene = new Scene(paginaCrearEmpleados, 600, 400);
-        stageEmpleados.setScene(scene);
-        stageEmpleados.show();
+        stageVehiculo.setScene(scene);
+        stageVehiculo.show();
     }
 
     public void pasar_A_Buscar_Vehiculo(ActionEvent actionEvent) throws IOException {
         Stage stageEmpleados = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaBuscarEmpleado = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Crear_Vehiculo.fxml")));
+        Parent paginaBuscarEmpleado = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Buscar_Vehiculo.fxml")));
         Scene scene = new Scene(paginaBuscarEmpleado, 600, 400);
         stageEmpleados.setScene(scene);
         stageEmpleados.show();

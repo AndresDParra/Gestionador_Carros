@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Vehiculo.Crear_Vehiculo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Vehiculo.Crear_Motocicleta">
     <children>
-        <Label layoutX="91.0" layoutY="14.0" prefHeight="25.0" prefWidth="415.0" text="                                                        Crear vehículo">
+        <Label layoutX="263.0" layoutY="14.0" prefHeight="25.0" prefWidth="125.0" text="Crear Motocicleta">
             <font>
                 <Font size="16.0" />
             </font>
@@ -20,26 +21,28 @@
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="439.0">
                     <children>
-                        <Label layoutX="32.0" layoutY="14.0" text="Información vehículo">
+                        <Label layoutX="31.0" layoutY="14.0" text="Información vehículo">
                             <font>
                                 <Font size="13.0" />
                             </font>
                         </Label>
-                        <Label layoutX="84.0" layoutY="48.0" text="Número matrícula: " />
-                        <Label layoutX="84.0" layoutY="85.0" text="Marca: " />
-                        <Label layoutX="80.0" layoutY="124.0" text="Año de publicación: " />
-                        <Label layoutX="88.0" layoutY="167.0" text="Modelo:" />
-                        <TextField fx:id="espacio_Numero_Matricula" layoutX="253.0" layoutY="43.0" />
+                        <Label layoutX="81.0" layoutY="56.0" text="Número matrícula: " />
+                        <Label layoutX="84.0" layoutY="84.0" text="Marca: " />
+                        <Label layoutX="81.0" layoutY="115.0" text="Año de publicación: " />
+                        <Label layoutX="81.0" layoutY="145.0" text="Modelo:" />
+                        <Label layoutX="79.0" layoutY="179.0" text="Tipo:" />
+                        <TextField fx:id="espacio_Numero_Matricula" layoutX="253.0" layoutY="52.0" />
                         <TextField fx:id="espacio_Marca_Vehiculo" layoutX="253.0" layoutY="80.0" />
-                        <TextField fx:id="espacio_Fecha_Publicacion" layoutX="253.0" layoutY="119.0" />
-                        <TextField fx:id="espacio_Modelo_Vehiculo" layoutX="253.0" layoutY="162.0" />
-                        <Button fx:id="Button_Crear_Vehiculo" layoutX="276.0" layoutY="215.0" mnemonicParsing="false" onAction="#crear_Vehiculo" text="crear vehículo" />
-                        <Button fx:id="Button_Limpiar_Espacio" layoutX="97.0" layoutY="215.0" mnemonicParsing="false" onAction="#limpiar_Informacion_Vehiculo" text="Limpiar" />
+                        <TextField fx:id="espacio_Fecha_Publicacion" layoutX="253.0" layoutY="111.0" />
+                        <TextField fx:id="espacio_Modelo_Motocicleta" layoutX="253.0" layoutY="141.0" />
+                        <Button fx:id="Button_Crear_Motocicleta" layoutX="276.0" layoutY="215.0" mnemonicParsing="false" onAction="#crear_Motocicleta" text="Crear" />
+                        <Button fx:id="Button_Limpiar_Espacio" layoutX="97.0" layoutY="215.0" mnemonicParsing="false" onAction="#limpiar_Informacion_Motocicleta" text="Limpiar" />
+                  <ComboBox fx:id="box_Tipo_Motocicleta" layoutX="258.0" layoutY="175.0" prefWidth="150.0" />
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="193.0" prefWidth="424.0">
                     <children>
-                        <TableView fx:id="table_Informacion_Vehiculo" layoutX="41.0" layoutY="10.0" prefHeight="165.0" prefWidth="409.0">
+                        <TableView fx:id="table_Informacion_Motocicleta" layoutX="41.0" layoutY="10.0" prefHeight="203.0" prefWidth="409.0">
                             <columns>
                                 <TableColumn fx:id="column_Matricula" prefWidth="102.0" text="Nro. matricula" />
                                 <TableColumn fx:id="column_Marca" prefWidth="48.0" text="Marca" />

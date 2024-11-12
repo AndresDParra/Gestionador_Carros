@@ -51,12 +51,5 @@ public class PaginaPrincipal {
         stageReservas.show();
     }
 
-    public void opciones_Empleados(ActionEvent actionEvent) throws IOException {
-        Stage stageEmpleados = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        Parent paginaOpcionesReservas = fxmlLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/gestionadordecarros/Pagina_Gestion_Empleados.fxml")));
-        Scene scene = new Scene(paginaOpcionesReservas, 600, 400);
-        stageEmpleados.setScene(scene);
-        stageEmpleados.show();
-    }
+
 }

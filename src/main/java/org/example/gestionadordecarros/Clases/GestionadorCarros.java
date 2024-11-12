@@ -45,7 +45,7 @@ public class GestionadorCarros {
         this.nombre = nombre;
     }
 
-    public ArrayList<Vehiculo> getVehiculos() {
+    public static ArrayList<Vehiculo> getVehiculos() {
         return vehiculos;
     }
 
