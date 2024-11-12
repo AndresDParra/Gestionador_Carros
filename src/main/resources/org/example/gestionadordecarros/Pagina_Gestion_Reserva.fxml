@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Reserva.Gestion_Reserva">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gestionadordecarros.Clases.Controlador.Reserva.Opciones_Reserva">
    <children>
-      <Text layoutX="238.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestión Reserva">
+      <Text layoutX="270.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserva">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <ComboBox fx:id="opciones_Vehiculo" layoutX="245.0" layoutY="134.0" prefHeight="26.0" prefWidth="160.0" />
-      <TextField fx:id="Espacio_Cliente" layoutX="245.0" layoutY="87.0" />
-      <TextField fx:id="espacio_Fecha_Inicio" layoutX="245.0" layoutY="188.0" />
-      <TextField fx:id="espacio_Fecha_FInal" layoutX="245.0" layoutY="245.0" />
-      <Text layoutX="113.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" />
-      <Text layoutX="113.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehiculo" />
-      <Text layoutX="113.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Inicio" />
-      <Text layoutX="113.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Entrega" />
-      <Button fx:id="Button_Reservar" layoutX="273.0" layoutY="313.0" mnemonicParsing="false" onAction="#guardar_Reserva" text="Reservar" />
+      <Button fx:id="Button_Crear_reserva" layoutX="277.0" layoutY="125.0" mnemonicParsing="false" onAction="#pasar_A_Crear_Reserva" text="Crear">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Button_Buscar_Reserva" layoutX="273.0" layoutY="248.0" mnemonicParsing="false" onAction="#pasar_A_Buscar_Reserva" text="Buscar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

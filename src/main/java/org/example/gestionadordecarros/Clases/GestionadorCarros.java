@@ -29,7 +29,7 @@ public class GestionadorCarros {
         GestionadorCarros.usuarios = usuarios;
     }
 
-    public ArrayList<Reserva> getReservas() {
+    public static ArrayList<Reserva> getReservas() {
         return reservas;
     }
 

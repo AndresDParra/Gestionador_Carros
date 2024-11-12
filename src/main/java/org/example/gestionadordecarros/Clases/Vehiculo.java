@@ -51,4 +51,6 @@ public class  Vehiculo  {
     public void setFechaFabricacion(LocalDate fechaFabricacion) {
         this.fechaFabricacion = fechaFabricacion;
     }
+
+
 }
